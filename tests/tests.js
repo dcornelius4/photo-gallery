@@ -1,3 +1,2 @@
 import './html-equal.js';
-
-const test = QUnit.test; 
+import './make-image.test.js';
