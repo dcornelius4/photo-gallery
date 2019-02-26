@@ -7,6 +7,7 @@ function imageTemplate(image) {
     <h2>${image.title}</h2>
     <img src="${image.url}">
 </li>`;
+    const template = document.createElement(template);
 }
 test('create a template literal function', assert => {
     //write the function in here and then move it into its own file
