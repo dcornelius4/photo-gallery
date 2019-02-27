@@ -1,25 +1,14 @@
 import images from '../data/images.js';
+import imageTemplate from '../src/make-image.js';
 
 const test = QUnit.test;
 
 test('create a template literal function', assert => {
     //write the function in here and then move it into its own file
-    function imageTemplate(image) {
-        const html = `<li>
-            <h2>${image.title}</h2>
-            <img src="${image.url}">
-</li>`;
-     
-        
-        const template = document.createElement('template');
-        //capitalize the HTML in innerHtml
-        template.innerHTML = html;
-        return template.content; 
-    }
-    
     //arrange
     //create the variable to initialize the index to 0 for the images
     const image = images[0];
+    
     //act
     const result = imageTemplate(image);
     const expected = 
