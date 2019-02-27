@@ -12,10 +12,11 @@ test('create a template literal function', assert => {
         const html = `<li>
         <h2>UniWhal</h2>
         <img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg">
-    </li>`;
+</li>`;
         
         const template = document.createElement('template');
-        template.innerHtml = html;
+        //capitalize the HTML in innerHtml
+        template.innerHTML = html;
         return template.content; 
     }
     
@@ -30,5 +31,5 @@ test('create a template literal function', assert => {
     <img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg">
 </li>`;
     //assert
-    assert.equal(result, expected); 
+    assert.htmlEqual(result, expected); 
 });
